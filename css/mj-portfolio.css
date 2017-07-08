@@ -1,0 +1,122 @@
+/* 초기화 */
+*{margin: 0;  padding: 0}
+body{font-family: sans-serif;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+html,body{height: 100%;}
+
+/* 첫 번재 화면 */
+#first_wrap{
+  height: 100%;
+  background: url('../img/main.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+#header{
+  width: 350px;  height: 130px;
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+  top: 50%;
+  margin-top: -65px;
+}
+#header > h1{
+  text-align: center;
+  color: white;
+  animation-name: logo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes logo {
+  from{
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#header > a{
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+.icon-wrapper{display: inline-block;}
+.custom-icon {
+  font-size:30px;
+  background:#666;
+  background:rgba(0,0,0,0.7);
+  padding:5px;
+  -webkit-border-radius:1100%;
+  -moz-border-radius:100%;
+  -o-border-radius:100%;
+  border-radius:100%;
+  border:3px solid #fff;
+  color:#fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  text-align:center;
+  display:table-cell;
+  vertical-align:middle;
+  width:30px;
+  height:30px;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  -o-transition:.5s;
+  transition:.5s;
+}
+.custom-icon:hover {background:rgba(0,0,0,0.9);}
+/* 두 번재 화면 */
+#second_wrap{
+  height: 100%;
+  position: relative;
+}
+#content{
+  width: 1000px;  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  top: 50%;
+  margin-top: -250px;
+  overflow: hidden;
+}
+#photo{
+  float: left;
+  margin-top: 50px;
+}
+#photo > img:last-child{
+  display: none;
+}
+a.iron:link{
+  color: blue;
+}
+a.iron:hover{
+  text-decoration: underline;
+}
+#description{
+  float: left;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+#description > p{
+  width: 550px;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 1.3em;
+  text-align: left;
+}
+#backButton{
+  width: 50px;  height: 50px;
+  line-height: 50px;
+  background: black;
+  color: white;
+  text-align: center;
+  float: right;
+  margin-top: 400px;
+}
+#backButton:hover{
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
