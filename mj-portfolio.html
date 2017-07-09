@@ -13,11 +13,12 @@
   <title>Document</title>
   <script>
     $(function() {
-      $('a').on('click', function(e) {
+      $('.down').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
       });
     });
+
     $(document).ready(function(){
       $(window).scroll(function(){
         if($(this).scrollTop() > 100){
@@ -30,13 +31,19 @@
         $('html,body').animate({scrollTop:0},600);
       });
     });
+
+    function photo_change(){
+    $('.iron').click(function(){
+      $('img').first().appendTo('#photo');
+    });
+  };
   </script>
 </head>
 <body>
   <header id="header_wrap">
     <div id="header_content">
       <h1>MI JIN PORTFOLIO</h1>
-      <a href="#section_wrap" class="icon-wrapper">
+      <a href="#section_wrap" class="icon-wrapper down">
           <i class="fa fa-angle-double-down fa-2x custom-icon"></i>
       </a>
     </div>
@@ -54,7 +61,7 @@
            나이: 벌써 스물다섯<br />
            전공: 컴퓨터정보처리학과로 입학, 웹 IT로 졸업<br />
            생활신조: 무엇이든 '꾸준히'가 답이다<br />
-           좋아하는 캐릭터: 아이언맨 / 빨강머리 앤</p>
+           좋아하는 캐릭터: <a href="javascript:photo_change()" class="iron">아이언맨</a> / 빨강머리 앤</p>
 
         <p>빠르게 발전하는 웹 시대에 따라 멋진 웹을 구현하고 새로운 언어와 프레임워크,
            다양한 개발자와 개성 있는 웹을 개발하길 꿈꿉니다</p>
@@ -65,7 +72,8 @@
            개성 넘치며 실용성 있는, 소비자 경험이 지속적으로 생산될 수 있는
            웹을 구축할 줄 아는 프론트엔드 개발자로의 성장,
            여름에는 스포츠를 즐기며 겨울에는 온천에서 나른함을 즐기는 삶을 사는 것입니다.</p>
-        <p><strong>Tools</strong>  photoshop Nuke Maya ZBrush / <strong>Languages</strong>  HTML CSS Javascript JQery</p>
+        <p><strong>Tools</strong>  photoshop Nuke Maya / <strong>Languages</strong>  HTML CSS Javascript JQery / 
+        <a href="https://github.com/jinbyjin"><strong>Github</strong></a></p>
       </div>
       <div id="backbutton">Top</div>
     </section>
