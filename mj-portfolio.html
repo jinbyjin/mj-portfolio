@@ -10,53 +10,28 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
-  <title>Document</title>
-  <script>
-    $(function() {
-      $('.down').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-      });
-    });
-
-    $(document).ready(function(){
-      $(window).scroll(function(){
-        if($(this).scrollTop() > 100){
-          $('#backbutton').fadeIn();
-        }else{
-          $('#backbutton').fadeOut();
-        }
-      });
-      $('#backbutton').click(function(){
-        $('html,body').animate({scrollTop:0},600);
-      });
-    });
-
-    function photo_change(){
-    $('.iron').click(function(){
-      $('img').first().appendTo('#photo');
-    });
-  };
-  </script>
+  <script src="js/script.js"></script>
+  <title>portfolio</title>
 </head>
 <body>
+
   <header id="header_wrap">
-    <div id="header_content">
+    <div id="header">
       <h1>MI JIN PORTFOLIO</h1>
-      <a href="#section_wrap" class="icon-wrapper down">
+      <a href="#main" class="icon-wrapper down">
           <i class="fa fa-angle-double-down fa-2x custom-icon"></i>
       </a>
     </div>
   </header>
 
-  <div id="section_wrap">
-    <section id="section_content">
+  <main id="main">
+    <section id="main_wrap">
       <div id="photo">
         <img src="img/img3.jpg" />
         <img src="img/img2.jpg" />
       </div>
       <div id="description">
-        <p><strong>나의 팩트.</strong></p>
+        <h4>나의 팩트.</h4>
         <p>이름: 이미진(李美眞)<br />
            나이: 벌써 스물다섯<br />
            전공: 컴퓨터정보처리학과로 입학, 웹 IT로 졸업<br />
@@ -72,11 +47,13 @@
            개성 넘치며 실용성 있는, 소비자 경험이 지속적으로 생산될 수 있는
            웹을 구축할 줄 아는 프론트엔드 개발자로의 성장,
            여름에는 스포츠를 즐기며 겨울에는 온천에서 나른함을 즐기는 삶을 사는 것입니다.</p>
-        <p><strong>Tools</strong>  photoshop Nuke Maya / <strong>Languages</strong>  HTML CSS Javascript JQery / 
-        <a href="https://github.com/jinbyjin"><strong>Github</strong></a></p>
+
+        <p><strong>Tools</strong>  photoshop Nuke Maya</p>
+        <p><strong>Languages</strong>  HTML CSS Javascript JQery</p>
+        <a href="https://github.com/jinbyjin">Github</a>
       </div>
       <div id="backbutton">Top</div>
     </section>
-  </div>
+  </main>
 </body>
 </html>
